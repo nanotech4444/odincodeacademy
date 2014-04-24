@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Comet Grid
+		</title>
+		<!--External resources-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+
+		<!--Local resources-->
+		<script type ="text/javascript" src="gridscripts.js"></script>
+		<link type="text/css" rel="stylesheet" href="gridstyles.css"/>
+	</head>
+<body>
+	<div id="pagewrapper">
+		<h1>Comet Grid</h1>
+		<p> A grid of squares where you can set the color and the number. The squares have animations </p>
+		<h5>Expansions</h5>
+		<ul id="expansions">
+			<li>Find the hidden picture by hovering</li>
+			<li>Sprite maker from any uploaded image</li>
+			<li>Comet grid</li>
+			<li>Super fast drawing grid optimizations</li>
+			<li>Make a maze in a random pattern using recursion</li>
+		</ul>
+		<!--Change color, grid size text boxes(2): lxw, clear grid-->
+		<div id="buttoncontainer">
+			<p> Current color:     
+			<button id="changecolor" onclick="changeColor();">Change Color</button>
+			</p>
+			<form>
+				<p> The number of grid squares is limited to 1->128 along each axis.  </p>
+				<p> Current grid dimensions: width:   height:   </p>
+				New w:
+				<input type="text" id="formwidth" value="Enter new width"> 
+				New h:
+				<input type="text" id="formheight" value="Enter new height">
+				<input type="submit" id="formsubmit" value="Create grid">
+			</form>
+			<p><button id="cleargrid" onclick="clearGrid();">Clear Grid</button></p>
+		</div> <!--End of tools-->
+			
+		<div id="gridwrapper">
+			<div class="grid_square">
+				Grid
+			</div>
+		</div>
+	</div> <!-- Page wrapper ends -->
+</body>
+</html>
